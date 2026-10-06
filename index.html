@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Alex Guzmán — Programador de Videojuegos</title>
-<meta name="description" content="Portafolio de Alex Guzmán, programador de videojuegos: gameplay, motor y gráficos. C++, C#, Unity, OpenGL." />
+<title>Alex Guzmán — Engine & Tools Programmer</title>
+<meta name="description" content="Portafolio de Alex Guzmán, engine and tools programmer: arquitectura de motor, herramientas, pipelines y profiling. C++, C#, Unity, OpenGL." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -38,10 +38,10 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <p class="availability"><span class="dot"></span> <span data-es="Disponible para prácticas y puestos junior" data-en="Available for internships and junior roles">Disponible para prácticas y puestos junior</span></p>
+    <p class="availability"><span class="dot"></span> <span data-es="Disponible · Engine / Tools — prácticas y junior" data-en="Available · Engine / Tools — intern & junior">Disponible · Engine / Tools — prácticas y junior</span></p>
     <h1>Alex Guzmán</h1>
-    <h2 class="subtitle" data-es="Programador de videojuegos — Gameplay · Motor · Gráficos" data-en="Game Programmer — Gameplay · Engine · Graphics">Programador de videojuegos — Gameplay · Motor · Gráficos</h2>
-    <p class="hero-desc" data-es="Estudiante de programación de videojuegos (SAE). Trabajo con C++, C# / Unity y OpenGL en sistemas de juego, arquitectura de motor y render. Publico mi progreso y código en GitHub." data-en="Game programming student (SAE). I work with C++, C# / Unity and OpenGL on gameplay systems, engine architecture and rendering. I publish my progress and code on GitHub.">Estudiante de programación de videojuegos (SAE). Trabajo con C++, C# / Unity y OpenGL en sistemas de juego, arquitectura de motor y render. Publico mi progreso y código en GitHub.</p>
+    <h2 class="subtitle" data-es="Engine & Tools Programmer — C++ · Unity · OpenGL" data-en="Engine & Tools Programmer — C++ · Unity · OpenGL">Engine & Tools Programmer — C++ · Unity · OpenGL</h2>
+    <p class="hero-desc" data-es="Estudiante de programación de videojuegos (SAE), enfocado en motor y herramientas: arquitectura de sistemas, pipelines de assets, herramientas de editor y profiling. Trabajo con C++ y C# / Unity. Publico mi progreso y código en GitHub." data-en="Game programming student (SAE) focused on engine and tools: systems architecture, asset pipelines, editor tooling and profiling. I work with C++ and C# / Unity, and publish my progress and code on GitHub.">Estudiante de programación de videojuegos (SAE), enfocado en motor y herramientas: arquitectura de sistemas, pipelines de assets, herramientas de editor y profiling. Trabajo con C++ y C# / Unity. Publico mi progreso y código en GitHub.</p>
     <div class="hero-cta">
       <a href="#proyectos" class="btn primary" data-es="Ver proyectos" data-en="View projects">Ver proyectos</a>
       <a href="https://github.com/AlexGuzmanSAE?tab=repositories" target="_blank" rel="noopener" class="btn secondary" data-es="Ver código en GitHub" data-en="Browse code on GitHub">Ver código en GitHub</a>
@@ -49,25 +49,25 @@
     <dl class="hero-stats" id="heroStats">
       <div><dt id="statRepos">12</dt><dd data-es="repositorios" data-en="repositories">repositorios</dd></div>
       <div><dt>C++ / C#</dt><dd data-es="lenguajes principales" data-en="main languages">lenguajes principales</dd></div>
-      <div><dt>Unity · OpenGL</dt><dd data-es="entornos principales" data-en="main environments">entornos principales</dd></div>
+      <div><dt>Engine · Tools</dt><dd data-es="enfoque principal" data-en="main focus">enfoque principal</dd></div>
       <div><dt id="statStars">–</dt><dd>stars</dd></div>
     </dl>
   </div>
   <aside class="profile-card">
     <img src="https://avatars.githubusercontent.com/u/207946455?v=4" alt="Fotografía de Alex Guzmán" />
     <h3>Alex Guzmán</h3>
-    <p class="muted">Game Programmer · SAE</p>
+    <p class="muted">Engine & Tools Programmer · SAE</p>
     <ul>
       <li><strong data-es="Ubicación" data-en="Location">Ubicación</strong><span data-es="España · abierto a remoto" data-en="Spain · open to remote">España · abierto a remoto</span></li>
-      <li><strong>Stack</strong><span>C++, C# / Unity, OpenGL, GLSL / ShaderLab, Git</span></li>
-      <li><strong data-es="Enfoque" data-en="Focus">Enfoque</strong><span data-es="Gameplay, sistemas, render e IA aplicada" data-en="Gameplay, systems, rendering and applied AI">Gameplay, sistemas, render e IA aplicada</span></li>
+      <li><strong>Stack</strong><span>C++, C# / Unity, CMake, Git, OpenGL</span></li>
+      <li><strong data-es="Enfoque" data-en="Focus">Enfoque</strong><span data-es="Motor, herramientas, pipelines y profiling" data-en="Engine, tooling, pipelines and profiling">Motor, herramientas, pipelines y profiling</span></li>
     </ul>
     <a class="btn secondary full" href="#contacto" data-es="Contactar" data-en="Contact">Contactar</a>
   </aside>
 </section>
 
 <section class="tech-strip" aria-label="Tecnologías">
-  <span>C++</span><span>C#</span><span>Unity</span><span>OpenGL</span><span>GLSL</span><span>ShaderLab</span><span>Git</span><span>CMake</span><span>IA / FSM</span>
+  <span>C++</span><span>CMake</span><span>Git</span><span>Unity (editor tools)</span><span>C#</span><span>Serialización</span><span>Profiling</span><span>OpenGL</span><span>GLSL</span>
 </section>
 
 <!-- PROYECTOS -->
@@ -79,9 +79,10 @@
   <div class="toolbar">
     <div class="filters" id="filters">
       <button class="chip active" data-filter="all">Todos</button>
-      <button class="chip" data-filter="gameplay">Gameplay</button>
       <button class="chip" data-filter="engine">Motor</button>
+      <button class="chip" data-filter="tools">Herramientas</button>
       <button class="chip" data-filter="graphics">Gráficos</button>
+      <button class="chip" data-filter="gameplay">Gameplay</button>
       <button class="chip" data-filter="ai">IA</button>
       <button class="chip" data-filter="mobile">Móvil / Web</button>
     </div>
@@ -101,11 +102,11 @@
   <div>
     <p class="section-kicker">02 — Sobre mí</p>
     <h2 data-es="Perfil" data-en="Profile">Perfil</h2>
-    <p data-es="Soy estudiante de programación de videojuegos. Me interesa la parte técnica del juego: control del personaje, arquitectura de sistemas, render y herramientas. Documento lo que aprendo en repositorios públicos con código revisable." data-en="I'm a game programming student focused on the technical side: character control, systems architecture, rendering and tooling. I document what I learn in public repositories with reviewable code.">Soy estudiante de programación de videojuegos. Me interesa la parte técnica del juego: control del personaje, arquitectura de sistemas, render y herramientas. Documento lo que aprendo en repositorios públicos con código revisable.</p>
+    <p data-es="Soy estudiante de programación de videojuegos, enfocado en motor y herramientas: arquitectura de sistemas, pipelines de contenido, herramientas de editor y flujos de trabajo que hacen al equipo más rápido. Documento lo que aprendo en repositorios públicos con código revisable." data-en="I'm a game programming student focused on engine and tools: systems architecture, content pipelines, editor tooling and workflows that make the team faster. I document what I learn in public repositories with reviewable code.">Soy estudiante de programación de videojuegos, enfocado en motor y herramientas: arquitectura de sistemas, pipelines de contenido, herramientas de editor y flujos de trabajo que hacen al equipo más rápido. Documento lo que aprendo en repositorios públicos con código revisable.</p>
     <ul class="about-list">
       <li><strong>Formación:</strong> <span data-es="Programación de videojuegos — SAE" data-en="Game programming — SAE">Programación de videojuegos — SAE</span></li>
-      <li><strong>Lenguajes:</strong> C++ (motor, RTS, OpenGL) · C# (Unity) · GLSL / ShaderLab · HTML/JS</li>
-      <li><strong>IA:</strong> <span data-es="máquinas de estados, pathfinding, métodos bayesianos y pruebas con ML" data-en="state machines, pathfinding, Bayesian methods and ML experiments">máquinas de estados, pathfinding, métodos bayesianos y pruebas con ML</span></li>
+      <li><strong>Lenguajes:</strong> C++ (motor, sistemas, OpenGL) · C# (herramientas de editor en Unity) · GLSL / ShaderLab · CMake, Git</li>
+      <li><strong>Herramientas:</strong> <span data-es="serialización, pipelines de assets, profiling y automatización de builds" data-en="serialization, asset pipelines, profiling and build automation">serialización, pipelines de assets, profiling y automatización de builds</span></li>
       <li><strong data-es="Idiomas" data-en="Languages">Idiomas:</strong> <span data-es="Español (nativo) · Inglés (técnico)" data-en="Spanish (native) · English (technical)">Español (nativo) · Inglés (técnico)</span></li>
     </ul>
     <div class="hero-cta">
@@ -117,9 +118,9 @@
     <div class="code-bar"><span>profile.ts</span></div>
 <pre><code>const profile = {
   name: <span class="s">"Alex Guzmán"</span>,
-  role: <span class="s">"Game Programmer"</span>,
-  stack: [<span class="s">"C++"</span>, <span class="s">"C# / Unity"</span>, <span class="s">"OpenGL"</span>],
-  interests: [<span class="s">"gameplay"</span>, <span class="s">"engine"</span>, <span class="s">"graphics"</span>],
+  role: <span class="s">"Engine & Tools Programmer"</span>,
+  stack: [<span class="s">"C++"</span>, <span class="s">"C# / Unity"</span>, <span class="s">"CMake"</span>, <span class="s">"Git"</span>],
+  interests: [<span class="s">"engine"</span>, <span class="s">"tools"</span>, <span class="s">"graphics"</span>],
   openToWork: <span class="k">true</span>,
 };</code></pre>
   </div>
@@ -130,10 +131,10 @@
   <p class="section-kicker">03 — Habilidades</p>
   <h2 data-es="Áreas de trabajo" data-en="Areas of expertise">Áreas de trabajo</h2>
   <div class="skills">
-    <div class="skill"><h3>Gameplay</h3><p>Control de personaje, cámaras, input, UI/HUD, sistemas de combate y progresión.</p><div class="tags"><span>Unity</span><span>C#</span><span>Cinemachine</span><span>Input System</span></div></div>
-    <div class="skill"><h3>Motor / Sistemas</h3><p>Bucle de juego, arquitectura entidad-componente, serialización, herramientas y profiling.</p><div class="tags"><span>C++</span><span>Git</span><span>CMake</span></div></div>
-    <div class="skill"><h3>Gráficos</h3><p>Pipeline OpenGL, shaders, render 2D/3D y partículas.</p><div class="tags"><span>OpenGL</span><span>GLSL</span><span>ShaderLab</span></div></div>
-    <div class="skill"><h3>IA aplicada</h3><p>Máquinas de estados, pathfinding y métodos probabilísticos para decisiones.</p><div class="tags"><span>FSM</span><span>A*</span><span>Bayes</span></div></div>
+    <div class="skill"><h3>Motor / Sistemas</h3><p>Bucle de juego, arquitectura entidad-componente, serialización, gestión de memoria y profiling.</p><div class="tags"><span>C++</span><span>CMake</span><span>Git</span><span>Profiling</span></div></div>
+    <div class="skill"><h3>Herramientas</h3><p>Herramientas de editor, pipelines de assets, automatización de builds y herramientas de depuración.</p><div class="tags"><span>Unity Editor</span><span>C#</span><span>Serialización</span><span>Builds</span></div></div>
+    <div class="skill"><h3>Gráficos</h3><p>Pipeline OpenGL, shaders y render 2D/3D al servicio del motor.</p><div class="tags"><span>OpenGL</span><span>GLSL</span><span>ShaderLab</span></div></div>
+    <div class="skill"><h3>Gameplay e IA (apoyo)</h3><p>Sistemas de juego y comportamientos (FSM, pathfinding) como usuario del motor.</p><div class="tags"><span>Unity</span><span>C#</span><span>FSM</span><span>A*</span></div></div>
   </div>
 </section>
 
@@ -141,7 +142,7 @@
 <section id="contacto" class="section contact">
   <p class="section-kicker">04 — Contacto</p>
   <h2 data-es="¿Hablamos?" data-en="Let's talk">¿Hablamos?</h2>
-  <p class="muted" data-es="Busco prácticas o puestos junior, y colaboraciones en game jams. Respondo en 24–48 h." data-en="Looking for internships or junior roles, and game jam collaborations. I reply within 24–48 h.">Busco prácticas o puestos junior, y colaboraciones en game jams. Respondo en 24–48 h.</p>
+  <p class="muted" data-es="Busco prácticas o puestos junior como engine o tools programmer. Respondo en 24–48 h." data-en="Looking for internships or junior roles as an engine or tools programmer. I reply within 24–48 h.">Busco prácticas o puestos junior como engine o tools programmer. Respondo en 24–48 h.</p>
   <div class="hero-cta center">
     <a class="btn primary" href="https://github.com/AlexGuzmanSAE" target="_blank" rel="noopener">GitHub</a>
     <a class="btn secondary" id="mailBtn" href="mailto:hola@alexguzman.dev">Email</a>

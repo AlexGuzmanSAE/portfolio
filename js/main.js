@@ -89,7 +89,7 @@ document.getElementById('loadGithub').addEventListener('click', async (e)=>{
     repos.forEach(r=>{
       if(r.fork) return;
       if(!PROJECTS.find(p=>p.repo.toLowerCase()===r.name.toLowerCase())){
-        PROJECTS.push({ repo:r.name, title:r.name, description:r.description||'Añade una descripción en js/projects.js (ver GUIA.md).', tags:['gameplay'], lang:r.language||'', gif:`assets/gifs/${r.name.toLowerCase()}.gif`, cover:r.name.slice(0,2).toUpperCase(), color:'#1e293b', features:[], demo:r.homepage||'' });
+        PROJECTS.push({ repo:r.name, title:r.name, description:r.description||'Añade una descripción en js/projects.js (ver GUIA.md).', tags:['engine'], lang:r.language||'', gif:`assets/gifs/${r.name.toLowerCase()}.gif`, cover:r.name.slice(0,2).toUpperCase(), color:'#1e293b', features:[], demo:r.homepage||'' });
         added++;
       }
       githubCache[r.name] = { stars: r.stargazers_count };

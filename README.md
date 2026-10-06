@@ -1,41 +1,41 @@
-# Alex Guzmán — Programador de Videojuegos
+# Alex Guzmán — Engine & Tools Programmer
 
-Portafolio profesional: gameplay, motor y gráficos. C++, C# / Unity, OpenGL.
+Portafolio profesional: arquitectura de motor, herramientas, pipelines y profiling. C++, C# / Unity, OpenGL, CMake.
 
 **Web:** https://alexguzmansae.github.io · **GitHub:** https://github.com/AlexGuzmanSAE
 
 ## Perfil
 
-Estudiante de programación de videojuegos (SAE), enfocado en la parte técnica:
-control de personaje, arquitectura de sistemas, render y herramientas.
-Este repositorio contiene la web del portafolio y la documentación de cada proyecto,
-con código fuente revisable en su repositorio correspondiente.
+Estudiante de programación de videojuegos (SAE), enfocado en motor y herramientas:
+sistemas, pipelines de contenido, herramientas de editor y flujos de trabajo que
+hacen al equipo más rápido. Busco prácticas o puestos junior como engine o tools programmer.
+Este repositorio contiene la web del portafolio; el código de cada proyecto vive en su
+propio repositorio, enlazado desde la web.
 
 ## Áreas de trabajo
 
-- **Gameplay** — control de personaje, cámaras, input, UI/HUD, combate y progresión.
-- **Motor / Sistemas** — bucle de juego, entidad-componente, serialización y profiling.
-- **Gráficos** — pipeline OpenGL, shaders GLSL / ShaderLab, render 2D/3D.
-- **IA aplicada** — máquinas de estados, pathfinding, métodos bayesianos.
+- **Motor / Sistemas** — bucle de juego, entidad-componente, serialización, memoria y profiling.
+- **Herramientas** — herramientas de editor, pipelines de assets, automatización de builds, depuración.
+- **Gráficos** — pipeline OpenGL, shaders GLSL / ShaderLab, render 2D/3D al servicio del motor.
+- **Gameplay e IA (apoyo)** — sistemas de juego y comportamientos como usuario del motor.
 
 ## Proyectos destacados
 
 | Proyecto | Descripción | Tecnología |
 |---|---|---|
-| Moory Up Cowboy | Plataformas vertical: controlador, progresión y HUD. | C# / Unity |
+| Módulo de motor C++ | Bucle, entidades, serialización y carga de niveles. | C++ / CMake |
 | dwaRTS | Prototipo RTS: selección, órdenes y cámara estratégica. | C++ |
-| PicoGacha | Sistema de invocaciones con shaders y efectos por rareza. | ShaderLab |
-| Módulo de motor C++ | Bucle, entidades y carga de niveles desde archivo. | C++ |
-| Beat'em up 2D | Combos, oleadas e IA de enemigos por estados. | C++ |
+| Proyecto FGL | Render propio, física, colisiones y debug tools. | C++ / OpenGL |
 | Laboratorio OpenGL | Pipeline, mallas, iluminación Phong y cámara. | C / OpenGL |
-| Clasificador bayesiano | Naive Bayes desde cero para decisiones adaptativas. | C |
+| Plantilla de plataformas | Base reutilizable: movimiento, tiles y checkpoints. | C++ |
+| Moory Up Cowboy | Plataformas vertical: controlador, progresión y HUD. | C# / Unity |
+| PicoGacha | Shaders y efectos para sistema de invocaciones. | ShaderLab |
 
 Cada tarjeta del portafolio incluye demostración en vídeo y ficha técnica.
-El código de cada proyecto vive en su propio repositorio (ver enlaces en la web).
 
 ## Tecnologías
 
-C++ · C# · Unity · OpenGL · GLSL / ShaderLab · Git · CMake · HTML/CSS/JS
+C++ · CMake · Git · C# / Unity (editor tools) · OpenGL · GLSL / ShaderLab · Serialización · Profiling
 
 ## Contacto
 

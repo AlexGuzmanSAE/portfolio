@@ -34,7 +34,7 @@ Cada proyecto es un bloque como este. Cópialo para añadir uno nuevo:
   title: "Nombre para mostrar",
   description: "Descripción en español (1-2 líneas).",
   description_en: "English description (1-2 lines).",
-  tags: ["gameplay"],
+  tags: ["engine", "tools"],
   lang: "C#",
   gif: "assets/gifs/mi-juego.gif",
   cover: "MJ",
@@ -59,12 +59,14 @@ Estructura en 1–2 líneas: **qué es + con qué lo hiciste + qué hiciste tú*
 `description_en`: lo mismo en inglés. Si lo omites, la web muestra el español en ambos idiomas.
 
 ### 2.4 `tags` (filtros)
-Elige 1–3 de esta lista cerrada (son los botones de filtro):
-`gameplay` · `engine` · `graphics` · `ai` · `mobile`
+Elige 1–3 de esta lista cerrada (son los botones de filtro).
+Como tu enfoque es engine/tools, la mayoría de proyectos deberían llevar `engine` o `tools`:
+`engine` · `tools` · `graphics` · `gameplay` · `ai` · `mobile`
 
-- Gameplay: controles, combate, niveles, HUD.
-- Motor (`engine` en código, se muestra "Motor"): bucle, entidades, serialización, herramientas.
+- Motor: bucle, entidades, serialización, memoria, profiling.
+- Herramientas (`tools`): editor tools, pipelines de assets, builds, depuración.
 - Gráficos: OpenGL, shaders, render, partículas.
+- Gameplay: controles, combate, niveles, HUD (úsalo como etiqueta secundaria).
 - IA: estados, pathfinding, Bayes/ML.
 - Móvil/Web: táctil, responsive, HTML.
 
