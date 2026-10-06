@@ -3,36 +3,34 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Alex Guzmán — Game Programmer</title>
-<meta name="description" content="Portafolio de Alex Guzmán, programador de videojuegos: gameplay, engine, gráficos y sistemas. C++, C#, Unity, OpenGL." />
+<title>Alex Guzmán — Programador de Videojuegos</title>
+<meta name="description" content="Portafolio de Alex Guzmán, programador de videojuegos: gameplay, motor y gráficos. C++, C#, Unity, OpenGL." />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="css/style.css" />
-<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🎮</text></svg>">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%231a56db'/><text x='50' y='68' font-size='55' text-anchor='middle' fill='white' font-family='Arial' font-weight='bold'>A</text></svg>">
 </head>
 <body>
-<div class="scanlines" aria-hidden="true"></div>
-<div class="bg-grid" aria-hidden="true"></div>
 
 <header class="nav" id="top">
-  <a class="logo" href="#top"><span class="logo-box">AG</span><span class="logo-text">alex<span>.dev</span></span></a>
+  <a class="logo" href="#top"><span class="logo-box">A</span><span class="logo-text">Alex Guzmán</span></a>
   <nav class="nav-links">
     <a href="#proyectos">Proyectos</a>
     <a href="#sobre-mi">Sobre mí</a>
-    <a href="#skills">Skills</a>
+    <a href="#habilidades">Habilidades</a>
     <a href="#contacto">Contacto</a>
   </nav>
   <div class="nav-actions">
-    <button id="langToggle" class="btn small ghost" title="Switch language">EN</button>
-    <a class="btn small primary" href="https://github.com/AlexGuzmanSAE" target="_blank" rel="noopener">GitHub ↗</a>
-    <button class="burger" id="burger" aria-label="Menú">≡</button>
+    <button id="langToggle" class="btn small secondary" title="Switch language">EN</button>
+    <a class="btn small primary" href="https://github.com/AlexGuzmanSAE" target="_blank" rel="noopener">GitHub</a>
+    <button class="burger" id="burger" aria-label="Menú">☰</button>
   </div>
 </header>
 <div class="mobile-menu" id="mobileMenu">
   <a href="#proyectos">Proyectos</a>
   <a href="#sobre-mi">Sobre mí</a>
-  <a href="#skills">Skills</a>
+  <a href="#habilidades">Habilidades</a>
   <a href="#contacto">Contacto</a>
 </div>
 
@@ -40,158 +38,135 @@
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
-    <p class="pixel-label"><span class="blink">●</span> <span data-es="DISPONIBLE PARA PRÁCTICAS / JUNIOR" data-en="OPEN TO INTERN / JUNIOR ROLES">DISPONIBLE PARA PRÁCTICAS / JUNIOR</span></p>
-    <h1>ALEX<br><span class="outline">GUZMÁN</span></h1>
-    <h2 class="subtitle"><span id="typed"></span><span class="caret">▌</span></h2>
-    <p class="hero-desc" data-es="Programador de videojuegos. Me especializo en gameplay, engine/sistemas y gráficos. C++, C# + Unity, OpenGL. Me gusta el código limpio, el profiling y que el juego se sienta bien en mando." data-en="Game programmer focused on gameplay, engine/systems and graphics. C++, C# + Unity, OpenGL. Clean code, profiling, and great game feel.">Programador de videojuegos. Me especializo en gameplay, engine/sistemas y gráficos. C++, C# + Unity, OpenGL. Me gusta el código limpio, el profiling y que el juego se sienta bien en mando.</p>
+    <p class="availability"><span class="dot"></span> <span data-es="Disponible para prácticas y puestos junior" data-en="Available for internships and junior roles">Disponible para prácticas y puestos junior</span></p>
+    <h1>Alex Guzmán</h1>
+    <h2 class="subtitle" data-es="Programador de videojuegos — Gameplay · Motor · Gráficos" data-en="Game Programmer — Gameplay · Engine · Graphics">Programador de videojuegos — Gameplay · Motor · Gráficos</h2>
+    <p class="hero-desc" data-es="Estudiante de programación de videojuegos (SAE). Trabajo con C++, C# / Unity y OpenGL en sistemas de juego, arquitectura de motor y render. Publico mi progreso y código en GitHub." data-en="Game programming student (SAE). I work with C++, C# / Unity and OpenGL on gameplay systems, engine architecture and rendering. I publish my progress and code on GitHub.">Estudiante de programación de videojuegos (SAE). Trabajo con C++, C# / Unity y OpenGL en sistemas de juego, arquitectura de motor y render. Publico mi progreso y código en GitHub.</p>
     <div class="hero-cta">
-      <a href="#proyectos" class="btn primary big">▶ <span data-es="Ver proyectos" data-en="View projects">Ver proyectos</span></a>
-      <a href="https://github.com/AlexGuzmanSAE?tab=repositories" target="_blank" rel="noopener" class="btn ghost big">⚙ <span data-es="Ver código" data-en="Browse code">Ver código</span></a>
+      <a href="#proyectos" class="btn primary" data-es="Ver proyectos" data-en="View projects">Ver proyectos</a>
+      <a href="https://github.com/AlexGuzmanSAE?tab=repositories" target="_blank" rel="noopener" class="btn secondary" data-es="Ver código en GitHub" data-en="Browse code on GitHub">Ver código en GitHub</a>
     </div>
-    <div class="hero-stats" id="heroStats">
-      <div><strong id="statRepos">12</strong><span>repos</span></div>
-      <div><strong>4</strong><span>lenguajes</span></div>
-      <div><strong>C++ / C#</strong><span>main</span></div>
-      <div><strong id="statStars">–</strong><span>★ github</span></div>
-    </div>
+    <dl class="hero-stats" id="heroStats">
+      <div><dt id="statRepos">12</dt><dd data-es="repositorios" data-en="repositories">repositorios</dd></div>
+      <div><dt>C++ / C#</dt><dd data-es="lenguajes principales" data-en="main languages">lenguajes principales</dd></div>
+      <div><dt>Unity · OpenGL</dt><dd data-es="entornos principales" data-en="main environments">entornos principales</dd></div>
+      <div><dt id="statStars">–</dt><dd>stars</dd></div>
+    </dl>
   </div>
-  <div class="hero-card" aria-hidden="true">
-    <div class="player-card">
-      <div class="player-head">
-        <img src="https://avatars.githubusercontent.com/u/207946455?v=4" alt="Alex Guzmán" />
-        <div><b>Alex Guzmán</b><i>Game Programmer — LVL 22</i></div>
-        <span class="hp">HP ♥♥♥♥♥</span>
-      </div>
-      <div class="stat-bar"><label Gameplay>Gameplay</label><div class="bar"><i style="width:88%"></i></div></div>
-      <div class="stat-bar"><label>Engine / C++</label><div class="bar"><i style="width:82%"></i></div></div>
-      <div class="stat-bar"><label>Graphics / Shaders</label><div class="bar"><i style="width:75%"></i></div></div>
-      <div class="stat-bar"><label>Unity / C#</label><div class="bar"><i style="width:85%"></i></div></div>
-      <p class="inventory">🎒 Inventario: Unity · Unreal nociones · OpenGL · Git · FMOD · IA (FSM, Bayes)</p>
-      <p class="hint">↑↓←→ para navegar · ENTER para contratar</p>
-    </div>
-  </div>
+  <aside class="profile-card">
+    <img src="https://avatars.githubusercontent.com/u/207946455?v=4" alt="Fotografía de Alex Guzmán" />
+    <h3>Alex Guzmán</h3>
+    <p class="muted">Game Programmer · SAE</p>
+    <ul>
+      <li><strong data-es="Ubicación" data-en="Location">Ubicación</strong><span data-es="España · abierto a remoto" data-en="Spain · open to remote">España · abierto a remoto</span></li>
+      <li><strong>Stack</strong><span>C++, C# / Unity, OpenGL, GLSL / ShaderLab, Git</span></li>
+      <li><strong data-es="Enfoque" data-en="Focus">Enfoque</strong><span data-es="Gameplay, sistemas, render e IA aplicada" data-en="Gameplay, systems, rendering and applied AI">Gameplay, sistemas, render e IA aplicada</span></li>
+    </ul>
+    <a class="btn secondary full" href="#contacto" data-es="Contactar" data-en="Contact">Contactar</a>
+  </aside>
 </section>
 
-<div class="marquee"><div class="marquee-track" id="marquee">C++ • C# • UNITY • OPENGL • SHADERS • GAMEPLAY • IA • FÍSICA • MULTIJUGADOR • PIXEL ART •&nbsp;</div></div>
+<section class="tech-strip" aria-label="Tecnologías">
+  <span>C++</span><span>C#</span><span>Unity</span><span>OpenGL</span><span>GLSL</span><span>ShaderLab</span><span>Git</span><span>CMake</span><span>IA / FSM</span>
+</section>
 
 <!-- PROYECTOS -->
 <section id="proyectos" class="section">
-  <div class="section-head">
-    <p class="pixel-label">// 01 — SELECT STAGE</p>
-    <h2 data-es="Proyectos destacados" data-en="Featured projects">Proyectos destacados</h2>
-    <p class="muted" data-es="Hover en una tarjeta para ver el gameplay en GIF. Click para ficha completa." data-en="Hover a card to see gameplay GIF. Click for full details.">Hover en una tarjeta para ver el gameplay en GIF. Click para ficha completa.</p>
-  </div>
+  <p class="section-kicker">01 — Proyectos</p>
+  <h2 data-es="Trabajo seleccionado" data-en="Selected work">Trabajo seleccionado</h2>
+  <p class="muted" data-es="Pasa el cursor sobre una tarjeta para ver una demostración en vídeo (GIF). Haz clic para ver el detalle técnico." data-en="Hover a card to preview it (GIF). Click for technical details.">Pasa el cursor sobre una tarjeta para ver una demostración en vídeo (GIF). Haz clic para ver el detalle técnico.</p>
 
   <div class="toolbar">
     <div class="filters" id="filters">
       <button class="chip active" data-filter="all">Todos</button>
       <button class="chip" data-filter="gameplay">Gameplay</button>
-      <button class="chip" data-filter="engine">Engine</button>
+      <button class="chip" data-filter="engine">Motor</button>
       <button class="chip" data-filter="graphics">Gráficos</button>
       <button class="chip" data-filter="ai">IA</button>
-      <button class="chip" data-filter="mobile">Mobile / Web</button>
+      <button class="chip" data-filter="mobile">Móvil / Web</button>
     </div>
     <div class="toolbar-right">
-      <label class="switch"><input type="checkbox" id="gifToggle" checked><span></span> GIFs</label>
-      <button class="btn small ghost" id="loadGithub">↻ <span data-es="Auto-cargar desde GitHub" data-en="Auto-load from GitHub">Auto-cargar desde GitHub</span></button>
+      <label class="switch"><input type="checkbox" id="gifToggle" checked><span data-es="Vista previa animada" data-en="Animated preview">Vista previa animada</span></label>
+      <button class="btn small secondary" id="loadGithub">↻ <span data-es="Sincronizar con GitHub" data-en="Sync with GitHub">Sincronizar con GitHub</span></button>
     </div>
   </div>
 
-  <div class="grid" id="grid"><!-- render por JS --></div>
+  <div class="grid" id="grid"></div>
 
-  <details class="howto">
-    <summary>＋ <span data-es="¿Cómo añado un repo nuevo? (30 segundos)" data-en="How do I add a new repo? (30 seconds)">¿Cómo añado un repo nuevo? (30 segundos)</span></summary>
-    <ol>
-      <li><span data-es="Abre" data-en="Open">Abre</span> <code>js/projects.js</code></li>
-      <li><span data-es="Copia un bloque y cambia" data-en="Copy a block and change">Copia un bloque y cambia</span> <code>repo, title, description, tags, gif</code></li>
-      <li><span data-es="Sube tu GIF a" data-en="Upload your GIF to">Sube tu GIF a</span> <code>assets/gifs/mi-juego.gif</code> <span data-es="y pon esa ruta en" data-en="and put that path in">y pon esa ruta en</span> <code>gif</code></li>
-      <li>Commit + push → GitHub Pages lo publica solo.</li>
-    </ol>
-<pre><code>{
-  repo: "MiJuegoNuevo",
-  title: "Mi Juego Nuevo",
-  description: "¿De qué va? ¿Qué programaste tú?",
-  tags: ["gameplay"],
-  lang: "C#",
-  gif: "assets/gifs/mi-juego.gif",
-  cover: "🎯",
-  demo: "https://...",
-},</code></pre>
-  </details>
+  <p class="muted small guide-link">¿Eres Alex? Lee <a href="GUIA.md">GUIA.md</a> para el paso a paso de cómo añadir proyectos y descripciones.</p>
 </section>
 
 <!-- SOBRE MI -->
 <section id="sobre-mi" class="section two-col">
   <div>
-    <p class="pixel-label">// 02 — ABOUT PLAYER</p>
-    <h2 data-es="Sobre mí" data-en="About me">Sobre mí</h2>
-    <p data-es="Soy Alex, programador de videojuegos en formación (SAE). Me muevo entre gameplay y motor: controllers con game feel, sistemas, física básica, render y shaders. Publico todo lo que aprendo en GitHub." data-en="I'm Alex, a game programming student (SAE). I work between gameplay and engine: game-feel controllers, systems, basic physics, rendering and shaders. I publish everything I learn on GitHub.">Soy Alex, programador de videojuegos en formación (SAE). Me muevo entre gameplay y motor: controllers con game feel, sistemas, física básica, render y shaders. Publico todo lo que aprendo en GitHub.</p>
+    <p class="section-kicker">02 — Sobre mí</p>
+    <h2 data-es="Perfil" data-en="Profile">Perfil</h2>
+    <p data-es="Soy estudiante de programación de videojuegos. Me interesa la parte técnica del juego: control del personaje, arquitectura de sistemas, render y herramientas. Documento lo que aprendo en repositorios públicos con código revisable." data-en="I'm a game programming student focused on the technical side: character control, systems architecture, rendering and tooling. I document what I learn in public repositories with reviewable code.">Soy estudiante de programación de videojuegos. Me interesa la parte técnica del juego: control del personaje, arquitectura de sistemas, render y herramientas. Documento lo que aprendo en repositorios públicos con código revisable.</p>
     <ul class="about-list">
-      <li>🎓 <span data-es="Estudiante de programación de videojuegos" data-en="Game programming student">Estudiante de programación de videojuegos</span> — SAE</li>
-      <li>🛠️ C++ (engine, RTS, OpenGL) · C# (Unity) · Shaders · HTML/JS</li>
-      <li>🤖 IA: máquinas de estados, utilidades, Bayes / ML experimental</li>
-      <li>📍 <span data-es="España — abierto a remoto" data-en="Spain — open to remote">España — abierto a remoto</span></li>
+      <li><strong>Formación:</strong> <span data-es="Programación de videojuegos — SAE" data-en="Game programming — SAE">Programación de videojuegos — SAE</span></li>
+      <li><strong>Lenguajes:</strong> C++ (motor, RTS, OpenGL) · C# (Unity) · GLSL / ShaderLab · HTML/JS</li>
+      <li><strong>IA:</strong> <span data-es="máquinas de estados, pathfinding, métodos bayesianos y pruebas con ML" data-en="state machines, pathfinding, Bayesian methods and ML experiments">máquinas de estados, pathfinding, métodos bayesianos y pruebas con ML</span></li>
+      <li><strong data-es="Idiomas" data-en="Languages">Idiomas:</strong> <span data-es="Español (nativo) · Inglés (técnico)" data-en="Spanish (native) · English (technical)">Español (nativo) · Inglés (técnico)</span></li>
     </ul>
     <div class="hero-cta">
       <a class="btn primary" href="https://github.com/AlexGuzmanSAE" target="_blank" rel="noopener">GitHub</a>
-      <a class="btn ghost" href="#contacto" data-es="Contactar" data-en="Contact">Contactar</a>
+      <a class="btn secondary" href="#contacto" data-es="Contactar" data-en="Contact">Contactar</a>
     </div>
   </div>
   <div class="code-window">
-    <div class="code-bar"><i></i><i></i><i></i><span>player_stats.cpp</span></div>
-<pre><code><span class="k">struct</span> <span class="t">Dev</span> {
-  string name = <span class="s">"Alex Guzmán"</span>;
-  string role = <span class="s">"Gameplay / Engine"</span>;
-  string[] stack = {<span class="s">"C++"</span>, <span class="s">"C# · Unity"</span>,
-    <span class="s">"OpenGL"</span>, <span class="s">"ShaderLab"</span>};
-  <span class="k">bool</span> lovesGameFeel = <span class="k">true</span>;
-  <span class="k">bool</span> openToWork = <span class="k">true</span>;
+    <div class="code-bar"><span>profile.ts</span></div>
+<pre><code>const profile = {
+  name: <span class="s">"Alex Guzmán"</span>,
+  role: <span class="s">"Game Programmer"</span>,
+  stack: [<span class="s">"C++"</span>, <span class="s">"C# / Unity"</span>, <span class="s">"OpenGL"</span>],
+  interests: [<span class="s">"gameplay"</span>, <span class="s">"engine"</span>, <span class="s">"graphics"</span>],
+  openToWork: <span class="k">true</span>,
 };</code></pre>
   </div>
 </section>
 
-<!-- SKILLS -->
-<section id="skills" class="section">
-  <p class="pixel-label">// 03 — SKILL TREE</p>
-  <h2>Skill tree</h2>
+<!-- HABILIDADES -->
+<section id="habilidades" class="section soft">
+  <p class="section-kicker">03 — Habilidades</p>
+  <h2 data-es="Áreas de trabajo" data-en="Areas of expertise">Áreas de trabajo</h2>
   <div class="skills">
-    <div class="skill"><h3>🎮 Gameplay</h3><p>Character controllers, game feel, cámaras, input, UI/HUD</p><div class="tags"><span>Unity</span><span>C#</span><span>Cinemachine</span><span>Input System</span></div></div>
-    <div class="skill"><h3>⚙️ Engine / Sistemas</h3><p>Arquitectura,ECS nociones,serialización,tools,profiling</p><div class="tags"><span>C++</span><span>Git</span><span>CMake</span><span>FMOD</span></div></div>
-    <div class="skill"><h3>✨ Gráficos</h3><p>OpenGL, shaders, ShaderLab, render 2D/3D, partículas</p><div class="tags"><span>OpenGL</span><span>GLSL</span><span>ShaderLab</span><span>HLSL</span></div></div>
-    <div class="skill"><h3>🤖 IA</h3><p>FSM, behaviour básico, pathfinding, Bayes / ML tests</p><div class="tags"><span>FSM</span><span>A*</span><span>Bayes</span><span>ML</span></div></div>
+    <div class="skill"><h3>Gameplay</h3><p>Control de personaje, cámaras, input, UI/HUD, sistemas de combate y progresión.</p><div class="tags"><span>Unity</span><span>C#</span><span>Cinemachine</span><span>Input System</span></div></div>
+    <div class="skill"><h3>Motor / Sistemas</h3><p>Bucle de juego, arquitectura entidad-componente, serialización, herramientas y profiling.</p><div class="tags"><span>C++</span><span>Git</span><span>CMake</span></div></div>
+    <div class="skill"><h3>Gráficos</h3><p>Pipeline OpenGL, shaders, render 2D/3D y partículas.</p><div class="tags"><span>OpenGL</span><span>GLSL</span><span>ShaderLab</span></div></div>
+    <div class="skill"><h3>IA aplicada</h3><p>Máquinas de estados, pathfinding y métodos probabilísticos para decisiones.</p><div class="tags"><span>FSM</span><span>A*</span><span>Bayes</span></div></div>
   </div>
 </section>
 
 <!-- CONTACTO -->
 <section id="contacto" class="section contact">
-  <p class="pixel-label">// 04 — GAME OVER? NO — CONTINUE?</p>
-  <h2 data-es="¿Hacemos un juego juntos?" data-en="Shall we make a game together?">¿Hacemos un juego juntos?</h2>
-  <p class="muted" data-es="Busco prácticas, junior o colaborar en game jams. Respondo rápido." data-en="Looking for internships, junior roles or game jams. Fast replies.">Busco prácticas, junior o colaborar en game jams. Respondo rápido.</p>
+  <p class="section-kicker">04 — Contacto</p>
+  <h2 data-es="¿Hablamos?" data-en="Let's talk">¿Hablamos?</h2>
+  <p class="muted" data-es="Busco prácticas o puestos junior, y colaboraciones en game jams. Respondo en 24–48 h." data-en="Looking for internships or junior roles, and game jam collaborations. I reply within 24–48 h.">Busco prácticas o puestos junior, y colaboraciones en game jams. Respondo en 24–48 h.</p>
   <div class="hero-cta center">
-    <a class="btn primary big" href="https://github.com/AlexGuzmanSAE" target="_blank" rel="noopener">GitHub</a>
-    <a class="btn ghost big" id="mailBtn" href="mailto:hola@alexguzman.dev">✉ Email</a>
-    <a class="btn ghost big" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn primary" href="https://github.com/AlexGuzmanSAE" target="_blank" rel="noopener">GitHub</a>
+    <a class="btn secondary" id="mailBtn" href="mailto:hola@alexguzman.dev">Email</a>
+    <a class="btn secondary" href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
   </div>
-  <p class="muted small">💡 <span data-es="Cambia tu email en" data-en="Change your email in">Cambia tu email en</span> <code>index.html</code> (busca <code>mailto:</code>) <span data-es="y tu LinkedIn en el mismo bloque." data-en="and your LinkedIn in the same block.">y tu LinkedIn en el mismo bloque.</span></p>
 </section>
 </main>
 
 <footer>
-  <span>© 2026 Alex Guzmán · Built for GitHub Pages · <span class="pixel">PRESS START TO CONTINUE ▸</span></span>
-  <a href="#top">↑ TOP</a>
+  <span>© 2026 Alex Guzmán</span>
+  <a href="#top">Volver arriba ↑</a>
 </footer>
 
 <!-- MODAL -->
 <div class="modal-backdrop" id="modalBackdrop">
-  <div class="modal" role="dialog" aria-modal="true">
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <button class="modal-close" id="modalClose">✕</button>
     <div class="modal-media" id="modalMedia"></div>
     <div class="modal-body">
       <h3 id="modalTitle"></h3>
       <p id="modalDesc" class="muted"></p>
       <div class="tags" id="modalTags"></div>
+      <h4 data-es="Aspectos técnicos" data-en="Technical highlights">Aspectos técnicos</h4>
       <ul id="modalFeatures"></ul>
-      <div class="hero-cta"><a class="btn primary" id="modalGithub" target="_blank" rel="noopener">Ver en GitHub ↗</a><a class="btn ghost" id="modalDemo" target="_blank" rel="noopener" style="display:none">Demo ▶</a></div>
+      <div class="hero-cta"><a class="btn primary" id="modalGithub" target="_blank" rel="noopener">Ver en GitHub</a><a class="btn secondary" id="modalDemo" target="_blank" rel="noopener" style="display:none">Ver demo</a></div>
     </div>
   </div>
 </div>
