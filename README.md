@@ -1,58 +1,46 @@
-# 🎮 Alex Guzmán — Portfolio (GitHub Pages ready)
+# Alex Guzmán — Programador de Videojuegos
 
-Portafolio de programador de videojuegos. Profesional + estilo arcade.
-- Hover en tarjetas = GIF de gameplay
-- Click = ficha completa
-- Filtros por disciplina
-- Auto-carga estrellas y repos desde la API pública de GitHub (sin permisos/token)
+Portafolio profesional: gameplay, motor y gráficos. C++, C# / Unity, OpenGL.
 
-## 🚀 Publicar en GitHub Pages (5 min)
+**Web:** https://alexguzmansae.github.io · **GitHub:** https://github.com/AlexGuzmanSAE
 
-**Opción A — URL bonita `alexguzmansae.github.io`:**
-1. Crea un repo nuevo llamado exactamente `AlexGuzmanSAE.github.io` (público)
-2. Sube estos archivos a la rama `main` (arrastra la carpeta en la web de GitHub o haz `git push`)
-3. Ve a `Settings → Pages → Deploy from branch → main / root` → Save
-4. Tu web estará en `https://alexguzmansae.github.io` en ~1 min
+## Perfil
 
-**Opción B — como subpágina:**
-1. Crea un repo `portfolio`, sube los archivos, `Settings → Pages → main / root`
-2. URL: `https://alexguzmansae.github.io/portfolio/`
+Estudiante de programación de videojuegos (SAE), enfocado en la parte técnica:
+control de personaje, arquitectura de sistemas, render y herramientas.
+Este repositorio contiene la web del portafolio y la documentación de cada proyecto,
+con código fuente revisable en su repositorio correspondiente.
 
-No necesitas darme permisos: tus repos son públicos y la web usa la API pública.
+## Áreas de trabajo
 
-## ➕ Añadir un repositorio (30 seg)
+- **Gameplay** — control de personaje, cámaras, input, UI/HUD, combate y progresión.
+- **Motor / Sistemas** — bucle de juego, entidad-componente, serialización y profiling.
+- **Gráficos** — pipeline OpenGL, shaders GLSL / ShaderLab, render 2D/3D.
+- **IA aplicada** — máquinas de estados, pathfinding, métodos bayesianos.
 
-1. Graba un GIF del juego (OBS / ScreenToGif / LICEcap, ~800px ancho, <5MB)
-2. Guárdalo en `assets/gifs/mi-juego.gif`
-3. Abre `js/projects.js` y añade:
-```js
-{
-  repo: "NombreExactoDelRepo",
-  title: "Nombre bonito",
-  description: "Qué es + qué programaste tú",
-  tags: ["gameplay"], // gameplay | engine | graphics | ai | mobile
-  lang: "C#",
-  gif: "assets/gifs/mi-juego.gif",
-  cover: "🎯",
-  features: ["Punto 1", "Punto 2"],
-  demo: "https://link-a-build-o-video",
-},
-```
-4. Commit + push. Listo.
+## Proyectos destacados
 
-Tip: si no tienes GIF aún, deja `gif: ""` y saldrá la portada con emoji degradado. El botón **"Auto-cargar desde GitHub"** de la web detecta repos nuevos y te dice cuántos faltan por documentar.
+| Proyecto | Descripción | Tecnología |
+|---|---|---|
+| Moory Up Cowboy | Plataformas vertical: controlador, progresión y HUD. | C# / Unity |
+| dwaRTS | Prototipo RTS: selección, órdenes y cámara estratégica. | C++ |
+| PicoGacha | Sistema de invocaciones con shaders y efectos por rareza. | ShaderLab |
+| Módulo de motor C++ | Bucle, entidades y carga de niveles desde archivo. | C++ |
+| Beat'em up 2D | Combos, oleadas e IA de enemigos por estados. | C++ |
+| Laboratorio OpenGL | Pipeline, mallas, iluminación Phong y cámara. | C / OpenGL |
+| Clasificador bayesiano | Naive Bayes desde cero para decisiones adaptativas. | C |
 
-## ✏️ Personalizar
-- Email / LinkedIn: edita el bloque `#contacto` en `index.html` (busca `mailto:`)
-- Foto: ya tira de tu avatar de GitHub automáticamente
-- Colores: variables en `css/style.css` (`--cyan`, `--pink`, etc.)
-- Idioma: la web lleva toggle ES/EN integrado (atributos `data-es` / `data-en`)
+Cada tarjeta del portafolio incluye demostración en vídeo y ficha técnica.
+El código de cada proyecto vive en su propio repositorio (ver enlaces en la web).
 
-## 📁 Estructura
-```
-index.html
-css/style.css
-js/projects.js  ← edita aquí tus proyectos
-js/main.js
-assets/gifs/    ← sube aquí tus GIFs
-```
+## Tecnologías
+
+C++ · C# · Unity · OpenGL · GLSL / ShaderLab · Git · CMake · HTML/CSS/JS
+
+## Contacto
+
+- GitHub: https://github.com/AlexGuzmanSAE
+- Email y LinkedIn: indicados en la sección de contacto de la web.
+
+---
+*Nota para el mantenedor: la guía de edición del contenido está en `GUIA.md`.*
