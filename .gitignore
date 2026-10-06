@@ -1,0 +1,9 @@
+# OS / editores
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+
+# No ignorar nada del site (GitHub Pages sirve todo lo demás)
+# Los GIFs de assets/gifs/ SÍ se suben a propósito
