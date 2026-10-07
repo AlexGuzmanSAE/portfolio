@@ -109,6 +109,7 @@ body.no-gifs .gif-preview{display:none}
 .skill{background:#fff;border:1px solid var(--line);border-radius:14px;padding:1.15rem}
 .skill h3{margin:.1rem 0 .3rem;font-size:1rem}
 .skill p{color:var(--muted);font-size:.9rem;margin:0 0 .6rem}
+.soft-title{margin:2rem 0 .2rem;font-size:1.15rem;letter-spacing:-.01em}
 
 /* contact */
 .contact{text-align:center}
