@@ -42,7 +42,7 @@ function render(){
 }
 
 // Filtros
-filtersEl.addEventListener('click', e=>{
+filtersEl?.addEventListener('click', e=>{
   const b = e.target.closest('.chip'); if(!b) return;
   document.querySelectorAll('.chip').forEach(c=>c.classList.remove('active'));
   b.classList.add('active');
@@ -50,8 +50,8 @@ filtersEl.addEventListener('click', e=>{
   render();
 });
 
-// Vista previa animada on/off
-document.getElementById('gifToggle').addEventListener('change', e=>{
+// Vista previa animada on/off (con guarda anti-nulos: si falta el toggle, no se rompe el render)
+document.getElementById('gifToggle')?.addEventListener('change', e=>{
   document.body.classList.toggle('no-gifs', !e.target.checked);
 });
 
@@ -72,34 +72,47 @@ function openModal(p){
     : `<span>${p.cover || p.title.slice(0,2).toUpperCase()}</span>`;
   backdrop.classList.add('open');
 }
-document.getElementById('modalClose').onclick = ()=> backdrop.classList.remove('open');
-backdrop.addEventListener('click', e=>{ if(e.target===backdrop) backdrop.classList.remove('open'); });
-document.addEventListener('keydown', e=>{ if(e.key==='Escape') backdrop.classList.remove('open'); });
+document.getElementById('modalClose')?.addEventListener('click', ()=> backdrop?.classList.remove('open'));
+backdrop?.addEventListener('click', e=>{ if(e.target===backdrop) backdrop.classList.remove('open'); });
+document.addEventListener('keydown', e=>{ if(e.key==='Escape') backdrop?.classList.remove('open'); });
 
 // Sincronizar con GitHub (API pública, sin permisos)
-document.getElementById('loadGithub').addEventListener('click', async (e)=>{
+async function fetchGithubRepos(){
+  const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=updated`);
+  if(!res.ok) throw new Error(`GitHub API ${res.status}`);
+  const repos = await res.json();
+  if(!Array.isArray(repos)) throw new Error('Respuesta inesperada de la API');
+  return repos;
+}
+
+function integrateRepos(repos){
+  let added = 0;
+  repos.forEach(r=>{
+    if(r.fork) return;
+    if(r.name.toLowerCase() === 'portfolio') return; // no auto-listar la propia web
+    if(!PROJECTS.find(p=>p.repo.toLowerCase()===r.name.toLowerCase())){
+      PROJECTS.push({ repo:r.name, title:r.name, description:r.description||'Añade una descripción en js/projects.js (ver GUIA.md).', tags:['engine'], lang:r.language||'', gif:`assets/gifs/${r.name.toLowerCase()}.gif`, cover:r.name.slice(0,2).toUpperCase(), color:'#1e293b', features:[], demo:r.homepage||'' });
+      added++;
+    }
+    githubCache[r.name] = { stars: r.stargazers_count };
+  });
+  repos.forEach(r=>{
+    const p = PROJECTS.find(p=>p.repo.toLowerCase()===r.name.toLowerCase());
+    if(p && !p.lang && r.language) p.lang = r.language;
+  });
+  render();
+  updateHeroStats(repos);
+  return added;
+}
+
+document.getElementById('loadGithub')?.addEventListener('click', async (e)=>{
   const btn = e.currentTarget; btn.disabled = true;
-  const label = btn.querySelector('span');
+  const label = btn.querySelector('span') || btn;
   const original = label.textContent;
   label.textContent = 'Sincronizando…';
   try{
-    const res = await fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100&sort=updated`);
-    const repos = await res.json();
-    let added = 0;
-    repos.forEach(r=>{
-      if(r.fork) return;
-      if(!PROJECTS.find(p=>p.repo.toLowerCase()===r.name.toLowerCase())){
-        PROJECTS.push({ repo:r.name, title:r.name, description:r.description||'Añade una descripción en js/projects.js (ver GUIA.md).', tags:['engine'], lang:r.language||'', gif:`assets/gifs/${r.name.toLowerCase()}.gif`, cover:r.name.slice(0,2).toUpperCase(), color:'#1e293b', features:[], demo:r.homepage||'' });
-        added++;
-      }
-      githubCache[r.name] = { stars: r.stargazers_count };
-    });
-    repos.forEach(r=>{
-      const p = PROJECTS.find(p=>p.repo.toLowerCase()===r.name.toLowerCase());
-      if(p && !p.lang && r.language) p.lang = r.language;
-    });
-    render();
-    updateHeroStats(repos);
+    const repos = await fetchGithubRepos();
+    const added = integrateRepos(repos);
     label.textContent = added ? `${added} proyecto(s) nuevo(s) detectado(s)` : 'Todo sincronizado';
   }catch{ label.textContent = 'Sin conexión con la API'; }
   setTimeout(()=>{ btn.disabled=false; label.textContent = original; }, 2500);
@@ -107,19 +120,22 @@ document.getElementById('loadGithub').addEventListener('click', async (e)=>{
 
 function updateHeroStats(repos){
   if(!repos?.length) return;
-  document.getElementById('statRepos').textContent = repos.length;
-  const stars = repos.reduce((a,r)=>a+r.stargazers_count,0);
-  document.getElementById('statStars').textContent = stars;
+  const realCount = repos.filter(r=>!r.fork && r.name.toLowerCase()!=='portfolio').length;
+  const reposEl = document.getElementById('statRepos');
+  if(reposEl) reposEl.textContent = realCount || repos.length;
+  const stars = repos.reduce((a,r)=>a+(r.stargazers_count||0),0);
+  const starsEl = document.getElementById('statStars');
+  if(starsEl) starsEl.textContent = stars;
 }
-fetch(`https://api.github.com/users/${GITHUB_USER}/repos?per_page=100`).then(r=>r.json()).then(repos=>{
-  if(Array.isArray(repos)){
-    repos.forEach(r=> githubCache[r.name]= {stars:r.stargazers_count});
-    updateHeroStats(repos); render();
-  }
-}).catch(()=>{});
+// Pintar inmediatamente con los datos locales, y luego enriquecer con la API.
+// Así la cuadrícula nunca queda vacía aunque la API falle (rate-limit / offline).
+render();
+fetchGithubRepos().then(repos=>{
+  integrateRepos(repos);
+}).catch(()=>{ /* mantiene datos locales de PROJECTS */ });
 
 // Idioma ES/EN
-document.getElementById('langToggle').addEventListener('click', e=>{
+document.getElementById('langToggle')?.addEventListener('click', e=>{
   lang = lang==='es'?'en':'es';
   e.target.textContent = lang==='es'?'EN':'ES';
   document.querySelectorAll('[data-es]').forEach(el=>{ el.textContent = el.dataset[lang]; });
@@ -128,7 +144,5 @@ document.getElementById('langToggle').addEventListener('click', e=>{
 });
 
 // Nav móvil
-document.getElementById('burger').onclick = ()=> document.getElementById('mobileMenu').classList.toggle('open');
-document.querySelectorAll('#mobileMenu a').forEach(a=>a.onclick=()=>document.getElementById('mobileMenu').classList.remove('open'));
-
-render();
+document.getElementById('burger')?.addEventListener('click', ()=> document.getElementById('mobileMenu')?.classList.toggle('open'));
+document.querySelectorAll('#mobileMenu a').forEach(a=>a.addEventListener('click', ()=>document.getElementById('mobileMenu')?.classList.remove('open')));
